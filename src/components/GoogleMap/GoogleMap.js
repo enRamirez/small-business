@@ -52,3 +52,56 @@ function GoogleMap({ address }) {
   }
 
 export default GoogleMap;
+
+
+
+// test # 2
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// // import "./index.css";
+// // import App from "./App";
+// // import reportWebVitals from "./reportWebVitals";
+// // import React from "react";
+// import GoogleMapReact from "google-map-react";
+
+// const AnyReactComponent = ({ text }) => (
+//   <div
+//     style={{
+//       color: "white",
+//       background: "grey",
+//       padding: "15px 10px",
+//       display: "inline-flex",
+//       textAlign: "center",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       borderRadius: "100%",
+//       transform: "translate(-50%, -50%)",
+//     }}
+//   >
+//     {text}
+//   </div>
+// );
+
+// export default class Map extends React.Component {
+//   static defaultProps = {
+//     center: { lat: 59.95, lng: 30.33 },
+//     zoom: 11,
+//   };
+
+//   render() {
+//     return (
+//       <GoogleMapReact
+//         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+//         defaultCenter={this.props.center}
+//         defaultZoom={this.props.zoom}
+//       >
+//         <AnyReactComponent
+//           lat={59.955413}
+//           lng={30.337844}
+//           text={"Kreyser Avrora"}
+//         />
+//       </GoogleMapReact>
+//     );
+//   }
+// }

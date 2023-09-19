@@ -1,11 +1,15 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router';
+import { Switch, Route, Redirect, Routes } from 'react-router';
 import cookie from 'cookie';
-
 import Listing from './containers/Listing';
 import Details from './containers/Details';
 import Login from './containers/Login';
 import AddListing from './containers/AddListing';
+import NavBar from './components/NavBar/NavBar';
+
+import { useNavigate, Link } from "react-router-dom";
+import StatusBar from './components/StatusBar/StatusBar';
+// const navigate = useNavigate();
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
@@ -14,25 +18,24 @@ const checkAuth = () => {
   return cookies["loggedIn"] ? true : false;
 }
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={(props) => checkAuth() === true
-              ? <Component {...props} />
-              : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
-    />
-  )
-}
+const ProtectedRoute = (props) => {
+  const { component: Component, ...rest } = props;
+
+  return checkAuth() === true ? <Component {...rest} /> : <Link to="/login" />;
+};
 
 const Router = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Listing} />
-      <Route path="/business/:id" component={Details} />
-      <Route path="/login" component={Login} />
-      <ProtectedRoute path="/addlisting" component={AddListing} />
-    </Switch>
+    <>
+      <NavBar />
+      <StatusBar />
+      <Routes>
+        <Route path="/" element={<Listing />} />
+        <Route path="/business/:id" element={<Details />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/addlisting" element={<ProtectedRoute component={AddListing} />} />
+      </Routes>
+    </>
   )
 }
 

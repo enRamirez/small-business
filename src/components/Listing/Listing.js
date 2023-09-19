@@ -9,7 +9,7 @@ import {
   TableHead,
   TableRow,
   IconButton,
-} from '@material-ui/core';
+} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import styles from './listing.module.css';

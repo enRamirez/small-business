@@ -8,7 +8,7 @@ import {
   Toolbar,
   Typography,
   Button
-} from '@material-ui/core';
+} from '@mui/material';
 import styles from './navbar.module.css';
 
 export default function NavBar() {

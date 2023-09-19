@@ -2,7 +2,7 @@ import React from 'react';
 import {
   TextField,
   Button
-} from '@material-ui/core';
+} from '@mui/material';
 import styles from './login.module.css';
 
 export default function Login({ user, userLogin }) {

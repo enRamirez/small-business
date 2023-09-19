@@ -11,8 +11,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
-      <StatusBar />
       <Router />
     </BrowserRouter>
   );

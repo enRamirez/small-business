@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button } from '@mui/material';
 import GoogleMap from '../GoogleMap/GoogleMap';
 import styles from './addListing.module.css';
 
