@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import cookie from 'cookie';
 import Listing from './containers/Listing';
 import Details from './containers/Details';
@@ -7,7 +7,7 @@ import Login from './containers/Login';
 import AddListing from './containers/AddListing';
 import NavBar from './components/NavBar/NavBar';
 
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StatusBar from './components/StatusBar/StatusBar';
 // const navigate = useNavigate();
 
